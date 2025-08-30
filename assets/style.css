@@ -32,15 +32,27 @@ body
     background-color: var(--cor-bg-tema-c);
 }
 
+/* BOTÃO DE TEMA */
 .btn-tema
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 1.3rem;
     top: 1rem;
     border: 2px solid var(--cor-txt-main-tema-c);
     box-shadow: 4px 4px var(--cor-txt-main-tema-c);
-    padding: 1.3rem;
+    width: 3rem;
+    height: 3rem;
 }
+
+.btn-tema > i 
+{
+    font-size: 35px;
+    color: var(--cor-txt-main-tema-c);
+}
+.btn-tema .fa-sun { display: none; }
 
 
 
@@ -61,6 +73,7 @@ header h1
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: -3%;
+    text-wrap: nowrap;
 }
 
 header p { font-size: 24px; text-transform: uppercase; }
@@ -76,7 +89,7 @@ header .titulo-e-redes
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
     width: 100%;
 }
 
@@ -84,12 +97,12 @@ header .titulo-e-redes
 {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .titulo-e-redes .linhas hr
 {
     border: 4px solid var(--cor-txt-main-tema-c);
-    width: 23rem;
 }
 
 .titulo-e-redes .redes
@@ -106,9 +119,16 @@ header .titulo-e-redes
     background-color: var(--cor-colorida);
     width: 3.5rem;
     height: 3.5rem;
-    box-shadow: 4px 4px var(--cor-txt-main-tema-c);
+    box-shadow: 5px 5px var(--cor-txt-main-tema-c);
     color: var(--cor-bg-tema-c);
 }
+
+.titulo-e-redes .redes > a > i 
+{
+    font-size: 42px;
+    color: var(--cor-bg-tema-c);
+}
+.titulo-e-redes .redes > a .fa-youtube { font-size: 37px; }
 
 
 header #header-desc { font-weight: 500; }
@@ -126,7 +146,7 @@ nav
 {
     width: 100%;
     display: flex;
-    gap: 2rem;
+    gap: 2.4rem;
     margin: 1.5rem 0 .9rem 0;
 }
 
