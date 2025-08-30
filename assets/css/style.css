@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 /* CONFIGURAÇÃO PADRÃO: 1080p */
-/* VARIÁVEIS */
+/* CORES */
 :root
 {
+    /* Tema claro */
     --cor-txt-main-tema-c: #1f1f1f;
     --cor-txt-sec-tema-c: #575757;
     --cor-bg-tema-c: #eaeaea;
     --cor-colorida: #833bff;
+
+    /* Tema escuro */
 }
+
 /* RESETANDO */
 *
 {
