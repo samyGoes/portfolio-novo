@@ -70,6 +70,14 @@ article #sessao-detalhes #sessao-detalhes-nav
     height: 1.5rem;
     background-color: var(--cor-colorida);
     rotate: 45deg;
+    transform-origin: bottom;
+    transition: all .4s ease;
+}
+
+/* ANIMAÇÃO QUANDO PASSAR O MOUSE PELOS LOSANGOS */
+#sessao-detalhes-nav #formas:hover > .losango
+{
+    rotate: 90deg;
 }
 
 #sessao-detalhes-data 
