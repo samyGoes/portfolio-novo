@@ -1,0 +1,15 @@
+/* REDEFININDO CONFIG GERAL */
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-bg-tema-c);
+}
+
+main p
+{
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--cor-txt-main-tema-c);
+}
