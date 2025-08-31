@@ -103,6 +103,7 @@ header .titulo-e-redes
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 1.3rem;
 }
 
 .titulo-e-redes .linhas hr
@@ -135,15 +136,7 @@ header .titulo-e-redes
 }
 .titulo-e-redes .redes > a .fa-youtube { font-size: 37px; }
 
-
 header #header-desc { font-weight: 500; }
-
-header .linhas 
-{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
 
 
 /* NAV */
