@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* CONFIGURAÇÃO PADRÃO: 1080p */
+
+/* RESETANDO */
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* CORPO GERAL */ 
+body
+{
+    min-height: 100vh;
+    padding: 6rem 13rem;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--cor-txt-main-tema-c);
+    background-color: var(--cor-bg-tema-c);
+}
+
+main 
+{  
+    display: flex;
+    flex-direction: column;
+}
+
+#formas
+{
+    display: flex;
+    gap: .6rem;
+    width: 7rem;
+}
+#formas .losango
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--cor-colorida);
+    rotate: 45deg;
+    transform-origin: bottom;
+    transition: all .4s ease;
+}
+
+/* ANIMAÇÃO QUANDO PASSAR O MOUSE PELOS LOSANGOS */
+#formas:hover > .losango
+{
+    rotate: 90deg;
+}
+
+.titulo 
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1.6rem;
+    margin: 1rem 0 3.5rem 0;
+}
+h1, h2, h3
+{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+h1 { font-size: 36px; }
+h2 { font-size: 24px; margin-bottom: .8rem; } 
+h3 { font-size: 20px; margin-bottom: .5rem; }
+
+.titulo > hr { border: 1px solid var(--cor-txt-main-tema-c); width: 100%; }
+
+p , ol, #link-icones { margin-bottom: 2.5rem; }
+p, a, ol li
+{
+    letter-spacing: 2%;
+    line-height: 26px;
+    font-size: 20px;
+    font-weight: 400;
+}
+a { color: var(--cor-colorida); }
+a:hover { opacity: .7; }
+
+#sil-ofl { font-weight: 500; }
+ol { margin-left: 1.3rem; }
+
+#btn-voltar
+{
+    margin-top: 2rem;
+    align-self: center;
+    border: 2px solid var(--cor-txt-main-tema-c);
+    box-shadow: 4px 4px var(--cor-txt-main-tema-c);
+    padding: .5rem 0;
+    text-align: center;
+    width: 19rem;
+
+    color: var(--cor-txt-main-tema-c);
+    font-weight: 500;
+    font-size: 22px;
+    text-decoration: none;
+}
+#btn-voltar:hover { opacity: 1; }
