@@ -126,7 +126,8 @@ article #sessao-detalhes hr { border: 1px solid var(--cor-txt-main-tema-c); }
 .quadrados
 {
     display: flex;
-    gap: .6rem
+    gap: .6rem;
+    margin: .9rem 0;
 }
 .quadrado
 {
