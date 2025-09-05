@@ -1,7 +1,6 @@
 const links = document.querySelectorAll("nav a");
 
 
-//localStorage.setItem("linkClicado", links[0]);
 
 // Calcula minha idade atual e adiciona ao HTML
 function idade()
@@ -15,27 +14,28 @@ function idade()
 }
 
 
-// Verifica qual botão foi clicado, seta o id para estilização e verifica quais não foram clicados no momento
+// Verifica qual link foi clicado, seta o id para estilização e verifica quais não foram clicados no momento
 // para retirar os ids de estilização
-function btnClicado()
+function btnClicado(link)
 {
-    for(let i = 0; i < links.length; i++)
+    for(let i = 0; i < link.length; i++)
     {
-        links[i].addEventListener("click", function()
+        link[i].addEventListener("click", function(event)
         {
             //event.preventDefault();
-            localStorage.setItem("linkClicado", links[i]);
-            links[i].id = "pagina-atual";    
+            localStorage.setItem("linkClicado", link[i]);
+            link[i].id = "pagina-atual";    
             
-            for(let j = 0; j < links.length; j++)
+            for(let j = 0; j < link.length; j++)
             {
-                if(links[j] != localStorage.getItem("linkClicado")) { links[j].id = ""; } 
+                if(link[j] != localStorage.getItem("linkClicado")) { link[j].id = ""; } 
             }
         });
     }
 }
 
-// Faz com que o último botão clicado permaneça com o id para ser estilizado
+
+// Faz com que o último link clicado permaneça com o id para ser estilizado
 function ultimoBtnClicado()
 {
     for(let i = 0; i < links.length; i++)
@@ -48,6 +48,7 @@ function ultimoBtnClicado()
     }    
 }
 
+
 // Sempre que estiver na página inicial seta o link dela no localStorage (como quando sai do site e volta dnv, para 
 // não continuar o último link q foi armazenado no localStorage)
 function telaInicial()
@@ -59,7 +60,7 @@ function telaInicial()
 }
 
 
-telaInicial();
-idade();
-btnClicado();
-ultimoBtnClicado();
+
+
+
+export { links, idade, btnClicado, ultimoBtnClicado, telaInicial };

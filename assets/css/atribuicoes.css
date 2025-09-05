@@ -82,7 +82,7 @@ a:hover { opacity: .7; }
 #sil-ofl { font-weight: 500; }
 ol { margin-left: 1.3rem; }
 
-#btn-voltar
+.btn-voltar
 {
     margin-top: 2rem;
     align-self: center;
@@ -97,4 +97,11 @@ ol { margin-left: 1.3rem; }
     font-size: 22px;
     text-decoration: none;
 }
-#btn-voltar:hover { opacity: 1; }
+.btn-voltar:hover { opacity: 1; }
+
+#pagina-atual
+{ 
+    transform: translate(4px, 4px); 
+    box-shadow: none; 
+    background-color: #ccaeff;
+}
