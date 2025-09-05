@@ -1,6 +1,9 @@
 const links = document.querySelectorAll("nav a");
 
 
+//localStorage.setItem("linkClicado", links[0]);
+
+// Calcula minha idade atual e adiciona ao HTML
 function idade()
 {
     const txtIdade = document.querySelector("#idade");
@@ -20,6 +23,7 @@ function btnClicado()
     {
         links[i].addEventListener("click", function()
         {
+            //event.preventDefault();
             localStorage.setItem("linkClicado", links[i]);
             links[i].id = "pagina-atual";    
             
@@ -44,9 +48,18 @@ function ultimoBtnClicado()
     }    
 }
 
+// Sempre que estiver na página inicial seta o link dela no localStorage (como quando sai do site e volta dnv, para 
+// não continuar o último link q foi armazenado no localStorage)
+function telaInicial()
+{                      
+    if(window.location.href == links[0] || window.location.href + "index.html" == links[0])
+    {
+        localStorage.setItem("linkClicado", links[0]);
+    }
+}
 
 
-
+telaInicial();
 idade();
 btnClicado();
 ultimoBtnClicado();
