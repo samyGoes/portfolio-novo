@@ -66,10 +66,27 @@ h1 { font-size: 36px; }
 h2 { font-size: 24px; margin-bottom: .8rem; } 
 h3 { font-size: 20px; margin-bottom: .5rem; }
 
-.titulo > hr { border: 1px solid var(--cor-txt-main-tema-c); width: 100%; }
+.titulo > hr 
+{ 
+    height: 3px; 
+    width: 100%; 
+    background-color: var(--cor-txt-main-tema-c);
+}
 
-p , ol, #link-icones { margin-bottom: 2.5rem; }
-p, a, ol li
+/* academico.html */
+
+ul li, .p-com-data
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+span { color: var(--cor-txt-sec-tema-c); text-wrap: nowrap; }
+.btn-voltar.academico { margin-top: 8rem !important; }
+/* ----- */
+
+p , ol, ul, #link-icones { margin-bottom: 2.5rem; }
+p, a, ol li, ul li
 {
     letter-spacing: 2%;
     line-height: 26px;
