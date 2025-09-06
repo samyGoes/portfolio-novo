@@ -156,7 +156,11 @@ nav > a
     box-shadow: none; 
     background-color: #ccaeff;
 }
-
+#link-rede-click
+{
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
 
 
 /* CORPO PRINCIPAL */

@@ -1,5 +1,5 @@
-const links = document.querySelectorAll("nav a");
-
+const links_nav = document.querySelectorAll("nav a");
+const links_redes = document.querySelectorAll(".link-rede");
 
 
 // Calcula minha idade atual e adiciona ao HTML
@@ -16,7 +16,7 @@ function idade()
 
 // Verifica qual link foi clicado, seta o id para estilização e verifica quais não foram clicados no momento
 // para retirar os ids de estilização
-function btnClicado(link)
+function btnClicado(link = [], l_id = "")
 {
     for(let i = 0; i < link.length; i++)
     {
@@ -24,7 +24,7 @@ function btnClicado(link)
         {
             //event.preventDefault();
             localStorage.setItem("linkClicado", link[i]);
-            link[i].id = "pagina-atual";    
+            link[i].id = l_id;    
             
             for(let j = 0; j < link.length; j++)
             {
@@ -38,12 +38,12 @@ function btnClicado(link)
 // Faz com que o último link clicado permaneça com o id para ser estilizado
 function ultimoBtnClicado()
 {
-    for(let i = 0; i < links.length; i++)
+    for(let i = 0; i < links_nav.length; i++)
     {
-        if(links[i] == localStorage.getItem("linkClicado"))
+        if(links_nav[i] == localStorage.getItem("linkClicado"))
         {
             // Setando o id para estilização do botão apertado
-            links[i].id = "pagina-atual";
+            links_nav[i].id = "pagina-atual";
         }     
     }    
 }
@@ -53,9 +53,9 @@ function ultimoBtnClicado()
 // não continuar o último link q foi armazenado no localStorage)
 function telaInicial()
 {                      
-    if(window.location.href == links[0] || window.location.href + "index.html" == links[0])
+    if(window.location.href == links_nav[0] || window.location.href + "index.html" == links_nav[0])
     {
-        localStorage.setItem("linkClicado", links[0]);
+        localStorage.setItem("linkClicado", links_nav[0]);
     }
 }
 
@@ -63,4 +63,4 @@ function telaInicial()
 
 
 
-export { links, idade, btnClicado, ultimoBtnClicado, telaInicial };
+export { links_nav, links_redes, idade, btnClicado, ultimoBtnClicado, telaInicial };
