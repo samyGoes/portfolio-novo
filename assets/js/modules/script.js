@@ -1,5 +1,6 @@
 const links_nav = document.querySelectorAll("nav a");
 const links_redes = document.querySelectorAll(".link-rede");
+const btn_tema = document.querySelector(".btn-tema");
 
 
 // Calcula minha idade atual e adiciona ao HTML
@@ -60,7 +61,58 @@ function telaInicial()
 }
 
 
+// Trocando o tema da página
+function mudaTema()
+{
+    if(!localStorage.getItem("tema"))
+    {
+        localStorage.setItem("tema", "padrão");
+    }
+    
+    // Quando clicar no botão de tema
+    btn_tema.addEventListener("click", function()
+    {
+        // Setar tema escuro
+        if(localStorage.getItem("tema") == "padrão")
+        {
+            localStorage.setItem("tema", "dark");
+            styleTema("btn-tema dark", "none", "block"); 
+        }
+        // Setar tema padrão (claro)
+        else 
+        { 
+            localStorage.setItem("tema", "padrão");    
+            styleTema("btn-tema", "block", "none");  
+        }
+    }); 
+}
+
+
+// Rodará sempre que a página for carregada para setar a estilização de cada tema
+function verificaTema()
+{ 
+    // Setar tema padrão (claro)
+    if(localStorage.getItem("tema") == "padrão") { styleTema("btn-tema", "block", "none"); }
+    // Setar tema dark
+    else { styleTema("btn-tema dark", "none", "block"); }
+}
+
+
+// Style dos temas
+function styleTema(btn_class, i_lua_d, i_sol_d)
+{
+    const i_lua = document.querySelector(".fa-moon");
+    const i_sol = document.querySelector(".fa-sun");
+
+    btn_tema.className = btn_class;
+    btn_tema.id = "btn-tema-click";
+    i_lua.style.display = i_lua_d;
+    i_sol.style.display = i_sol_d;
+
+    // Efeito de "click"
+    setTimeout(function() { btn_tema.id = ""; }, 400);
+}
 
 
 
-export { links_nav, links_redes, idade, btnClicado, ultimoBtnClicado, telaInicial };
+export { links_nav, links_redes, idade, btnClicado, ultimoBtnClicado, telaInicial, mudaTema, verificaTema };

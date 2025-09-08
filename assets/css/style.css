@@ -47,7 +47,18 @@ body
     color: var(--cor-txt-main-tema-c);
 }
 .btn-tema .fa-sun { display: none; }
-
+.btn-tema.dark
+{
+    box-shadow: 4px 4px var(--cor-txt-sec-tema-c);
+    background-color: var(--cor-txt-main-tema-c);
+    border: 2px solid var(--cor-txt-sec-tema-c);
+}
+.btn-tema .fa-solid.fa-sun { color: var(--cor-txt-sec-tema-c); }
+#btn-tema-click 
+{
+    transform: translate(4px, 4px);  
+    box-shadow: none;
+}
 
 
 /* HEADER */
