@@ -15,6 +15,8 @@ function idade()
 }
 
 
+//#region EFEITOS DE CLICK DE BOTÕES/LINKS
+
 // Verifica qual link foi clicado, seta o id para estilização e verifica quais não foram clicados no momento
 // para retirar os ids de estilização
 function btnClicado(link = [], l_id = "", var_localStorage)
@@ -59,7 +61,10 @@ function telaInicial()
         localStorage.setItem("pag_atual", links_nav[0]);
     }
 }
+//#endregion
 
+
+//#region TEMA
 
 // Trocando o tema da página
 function mudaTema()
@@ -112,7 +117,6 @@ function styleTema(btn_class, i_lua_d, i_sol_d)
     // Efeito de "click"
     setTimeout(function() { btn_tema.id = ""; }, 400);
 }
-
-
+//#endregion
 
 export { links_nav, links_redes, idade, btnClicado, ultimoBtnClicado, telaInicial, mudaTema, verificaTema };
