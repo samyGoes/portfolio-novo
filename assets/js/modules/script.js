@@ -17,19 +17,19 @@ function idade()
 
 // Verifica qual link foi clicado, seta o id para estilização e verifica quais não foram clicados no momento
 // para retirar os ids de estilização
-function btnClicado(link = [], l_id = "")
+function btnClicado(link = [], l_id = "", var_localStorage)
 {
     for(let i = 0; i < link.length; i++)
     {
         link[i].addEventListener("click", function(event)
         {
             //event.preventDefault();
-            localStorage.setItem("linkClicado", link[i]);
+            localStorage.setItem(var_localStorage, link[i]);
             link[i].id = l_id;    
             
             for(let j = 0; j < link.length; j++)
             {
-                if(link[j] != localStorage.getItem("linkClicado")) { link[j].id = ""; } 
+                if(link[j] != localStorage.getItem(var_localStorage)) { link[j].id = ""; } 
             }
         });
     }
@@ -41,7 +41,7 @@ function ultimoBtnClicado()
 {
     for(let i = 0; i < links_nav.length; i++)
     {
-        if(links_nav[i] == localStorage.getItem("linkClicado"))
+        if(links_nav[i] == localStorage.getItem("pag_atual"))
         {
             // Setando o id para estilização do botão apertado
             links_nav[i].id = "pagina-atual";
@@ -56,7 +56,7 @@ function telaInicial()
 {                      
     if(window.location.href == links_nav[0] || window.location.href + "index.html" == links_nav[0])
     {
-        localStorage.setItem("linkClicado", links_nav[0]);
+        localStorage.setItem("pag_atual", links_nav[0]);
     }
 }
 

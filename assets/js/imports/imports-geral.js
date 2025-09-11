@@ -5,6 +5,6 @@ verificaTema();
 mudaTema();
 telaInicial();
 idade();
-btnClicado(links_nav, "pagina-atual");
-btnClicado(links_redes, "link-rede-click");
+btnClicado(links_nav, "pagina-atual", "pag_atual");
+btnClicado(links_redes, "link-rede-click", "click_link_rede");
 ultimoBtnClicado();
