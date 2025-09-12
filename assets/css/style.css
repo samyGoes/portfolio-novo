@@ -21,8 +21,8 @@ body
     padding: 0 13rem;
 
     font-family: 'Roboto Condensed', sans-serif;
-    color: var(--cor-txt-main-tema-c);
-    background-color: var(--cor-bg-tema-c);
+    color: var(--cor-txt-main);
+    background-color: var(--cor-bg);
 }
 
 /* BOTÃO DE TEMA */
@@ -34,8 +34,8 @@ body
     position: absolute;
     right: 1.3rem;
     top: 1rem;
-    border: 2px solid var(--cor-txt-main-tema-c);
-    box-shadow: 4px 4px var(--cor-txt-main-tema-c);
+    border: 2px solid var(--cor-txt-main);
+    box-shadow: 4px 4px var(--cor-txt-main);
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -44,16 +44,15 @@ body
 .btn-tema > i 
 {
     font-size: 35px;
-    color: var(--cor-txt-main-tema-c);
+    color: var(--cor-txt-main);
 }
 .btn-tema .fa-sun { display: none; }
 .btn-tema.dark
 {
-    box-shadow: 4px 4px var(--cor-txt-sec-tema-c);
-    background-color: var(--cor-txt-main-tema-c);
-    border: 2px solid var(--cor-txt-sec-tema-c);
+    box-shadow: 4px 4px var(--cor-txt-sec);
+    border: 2px solid var(--cor-txt-sec);
 }
-.btn-tema .fa-solid.fa-sun { color: var(--cor-txt-sec-tema-c); }
+.btn-tema .fa-solid.fa-sun { color: #bebebe; }
 #btn-tema-click 
 {
     transform: translate(4px, 4px);  
@@ -86,7 +85,7 @@ header p { font-size: 24px; text-transform: uppercase; }
 header #header-info
 {
     font-weight: 400;
-    color: var(--cor-txt-sec-tema-c);
+    color: var(--cor-txt-sec);
 }
 
 header .titulo-e-redes
@@ -109,7 +108,7 @@ header .titulo-e-redes
 .titulo-e-redes .linhas hr
 {
     height: 8px;
-    background-color: var(--cor-txt-main-tema-c);
+    background-color: var(--cor-txt-main);
 }
 
 .titulo-e-redes .redes
@@ -126,14 +125,14 @@ header .titulo-e-redes
     background-color: var(--cor-colorida);
     width: 3.5rem;
     height: 3.5rem;
-    box-shadow: 5px 5px var(--cor-txt-main-tema-c);
-    color: var(--cor-bg-tema-c);
+    box-shadow: 5px 5px var(--cor-txt-main);
+    color: var(--cor-bg);
 }
 
 .titulo-e-redes .redes > a > i 
 {
     font-size: 42px;
-    color: var(--cor-bg-tema-c);
+    color: #eaeaea;
 }
 .titulo-e-redes .redes > a .fa-youtube { font-size: 37px; }
 
@@ -152,12 +151,12 @@ nav
 nav > a
 {
     flex-grow: 1;
-    border: 2px solid var(--cor-txt-main-tema-c);
-    box-shadow: 4px 4px var(--cor-txt-main-tema-c);
+    border: 2px solid var(--cor-txt-main);
+    box-shadow: 4px 4px var(--cor-txt-main);
     padding: .6rem 0;
     text-align: center;
 
-    color: var(--cor-txt-main-tema-c);
+    color: var(--cor-txt-main);
     font-weight: 500;
     text-transform: capitalize;
     font-size: 25px;
@@ -166,7 +165,6 @@ nav > a
 { 
     transform: translate(4px, 4px); 
     box-shadow: none; 
-    background-color: #ccaeff;
 }
 #link-rede-click
 {
@@ -201,7 +199,7 @@ footer .sessao-2
 
 footer p
 {
-    color: var(--cor-txt-sec-tema-c);
+    color: var(--cor-txt-sec);
 }
 
 footer a

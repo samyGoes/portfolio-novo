@@ -12,7 +12,7 @@ main
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    background-color: var(--cor-bg-tema-c);
+    background-color: var(--cor-bg);
 }
 
 
@@ -36,8 +36,8 @@ article #sessao-imgs figure
 {
     height: 21rem;
     width: 100%;
-    border: 2px solid var(--cor-txt-main-tema-c);
-    box-shadow: 5px 5px var(--cor-txt-main-tema-c);
+    border: 2px solid var(--cor-txt-main);
+    box-shadow: 5px 5px var(--cor-txt-main);
 }
 article #sessao-imgs figure img
 {
@@ -84,7 +84,7 @@ article #sessao-detalhes #sessao-detalhes-nav
 {
     font-size: 18px;
     font-weight: 400;
-    color: var(--cor-txt-sec-tema-c);
+    color: var(--cor-txt-sec);
     text-transform: uppercase;
 }
 
@@ -96,7 +96,7 @@ article #sessao-detalhes h2, article #sessao-detalhes h3
 article #sessao-detalhes h2 { font-size: 36px; font-weight: 500; }
 article #sessao-detalhes h3 { font-size: 24px; font-weight: 500; } 
 
-article #sessao-detalhes hr { border: 1px solid var(--cor-txt-main-tema-c); }
+article #sessao-detalhes hr { border: 1px solid var(--cor-txt-main); }
 
 #sessao-detalhes li, #sessao-detalhes p
 {
@@ -133,7 +133,7 @@ article #sessao-detalhes hr { border: 1px solid var(--cor-txt-main-tema-c); }
 {
     width: 1.5rem;
     height: 1.5rem;
-    background-color: var(--cor-txt-main-tema-c);
+    background-color: var(--cor-txt-main);
 }
 
 

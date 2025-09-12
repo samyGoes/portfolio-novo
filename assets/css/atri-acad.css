@@ -17,8 +17,8 @@ body
     padding: 6rem 13rem;
 
     font-family: 'Roboto Condensed', sans-serif;
-    color: var(--cor-txt-main-tema-c);
-    background-color: var(--cor-bg-tema-c);
+    color: var(--cor-txt-main);
+    background-color: var(--cor-bg);
 }
 
 main 
@@ -70,7 +70,7 @@ h3 { font-size: 20px; margin-bottom: .5rem; }
 { 
     height: 3px; 
     width: 100%; 
-    background-color: var(--cor-txt-main-tema-c);
+    background-color: var(--cor-txt-main);
 }
 
 /* academico.html */
@@ -81,7 +81,7 @@ ul li, .p-com-data
     justify-content: space-between;
     gap: 3rem;
 }
-span { color: var(--cor-txt-sec-tema-c); text-wrap: nowrap; }
+span { color: var(--cor-txt-sec); text-wrap: nowrap; }
 .btn-voltar.academico { margin-top: 8rem !important; }
 /* ----- */
 
@@ -103,13 +103,13 @@ ol { margin-left: 1.3rem; }
 {
     margin-top: 2rem;
     align-self: center;
-    border: 2px solid var(--cor-txt-main-tema-c);
-    box-shadow: 4px 4px var(--cor-txt-main-tema-c);
+    border: 2px solid var(--cor-txt-main);
+    box-shadow: 4px 4px var(--cor-txt-main);
     padding: .5rem 0;
     text-align: center;
     width: 19rem;
 
-    color: var(--cor-txt-main-tema-c);
+    color: var(--cor-txt-main);
     font-weight: 500;
     font-size: 22px;
     text-decoration: none;
@@ -120,5 +120,4 @@ ol { margin-left: 1.3rem; }
 { 
     transform: translate(4px, 4px); 
     box-shadow: none; 
-    background-color: #ccaeff;
 }
