@@ -14,7 +14,7 @@
 body
 {
     min-height: 100vh;
-    padding: 6rem 13rem;
+    padding: 5vw 10.833vw;
 
     font-family: 'Roboto Condensed', sans-serif;
     color: var(--cor-txt-main);
@@ -30,13 +30,13 @@ main
 #formas
 {
     display: flex;
-    gap: .6rem;
+    gap: clamp(0.4rem, .5vw, .5vw);
     width: 7rem;
 }
 #formas .losango
 {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: clamp(0.938rem, 1.25vw, 1.25vw);
+    height: clamp(0.938rem, 1.25vw, 1.25vw);
     background-color: var(--cor-colorida);
     rotate: 45deg;
     transform-origin: bottom;
@@ -62,13 +62,13 @@ h1, h2, h3
     font-weight: 500;
     text-transform: uppercase;
 }
-h1 { font-size: 36px; }
-h2 { font-size: 24px; margin-bottom: .8rem; } 
+h1 { font-size: clamp(1.5rem, 1.875vw, 1.875vw); }
+h2 { font-size: clamp(1.2rem, 1.25vw, 1.25vw); margin-bottom: .8rem; } 
 h3 { font-size: 20px; margin-bottom: .5rem; }
 
 .titulo > hr 
 { 
-    height: 3px; 
+    height: clamp(2px, 0.156vw, 0.156vw); 
     width: 100%; 
     background-color: var(--cor-txt-main);
 }
@@ -85,12 +85,12 @@ span { color: var(--cor-txt-sec); text-wrap: nowrap; }
 .btn-voltar.academico { margin-top: 8rem !important; }
 /* ----- */
 
-p , ol, ul, #link-icones { margin-bottom: 2.5rem; }
+p, ol, ul, #link-icones { margin-bottom: clamp(1.5rem, 2.083vw, 2.083vw) }
 p, a, ol li, ul li
 {
     letter-spacing: 2%;
-    line-height: 26px;
-    font-size: 20px;
+    line-height: clamp(1.063rem, 1.5vw, 1.5vw);
+    font-size: clamp(0.875rem, 1.042vw, 1.042vw);
     font-weight: 400;
 }
 a { color: var(--cor-colorida); }
@@ -103,18 +103,19 @@ ol { margin-left: 1.3rem; }
 {
     margin-top: 2rem;
     align-self: center;
-    border: 2px solid var(--cor-txt-main);
-    box-shadow: 4px 4px var(--cor-txt-main);
-    padding: .5rem 0;
+    width: clamp(11.375rem, 17vw, 17vw);
+    padding: clamp(.4rem, 0.5vw, .7rem) 0;
+    border: clamp(2px, 0.156vw, 0.156vw) solid var(--cor-txt-main);
+    box-shadow: clamp(3px, 0.208vw, 0.208vw) clamp(3px, 0.208vw, 0.208vw) var(--cor-txt-main);
+
+    text-decoration: none;
     text-align: center;
-    width: 19rem;
 
     color: var(--cor-txt-main);
     font-weight: 500;
-    font-size: 22px;
-    text-decoration: none;
+    font-size: clamp(.9rem, 1.302vw, 1.688rem);
 }
-.btn-voltar:hover { opacity: 1; }
+/* .btn-voltar:hover { opacity: 1; } */
 
 #pagina-atual
 { 

@@ -18,7 +18,8 @@ body
     flex-direction: column;
     max-height: 100vh;
     height: 100vh;
-    padding: 0 13rem;
+                /*  13rem */ 
+    padding: 0 clamp(5rem, 10.833vw, 15rem);
 
     font-family: 'Roboto Condensed', sans-serif;
     color: var(--cor-txt-main);
@@ -34,16 +35,18 @@ body
     position: absolute;
     right: 1.3rem;
     top: 1rem;
-    border: 2px solid var(--cor-txt-main);
-    box-shadow: 4px 4px var(--cor-txt-main);
-    width: 3rem;
-    height: 3rem;
+    border: clamp(2px, 0.156vw, 0.156vw) solid var(--cor-txt-main);
+    box-shadow: clamp(3px, 0.208vw, 0.208vw) clamp(3px, 0.208vw, 0.208vw) var(--cor-txt-main);
+        /* 3rem */
+    width: clamp(2.1rem, 2.5vw, 3.2rem);
+    height: clamp(2.1rem, 2.5vw, 3.2rem);
     cursor: pointer;
 }
 
 .btn-tema > i 
 {
-    font-size: 35px;
+            /* 35px */
+    font-size: clamp(1.3rem, 1.823vw, 2.2rem);
     color: var(--cor-txt-main);
 }
 .btn-tema .fa-sun { display: none; }
@@ -66,21 +69,27 @@ header
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0;
-    gap: 1rem;
+    padding: 1.5rem 0 1.5rem 0;
+    gap: 0.5vw;
     width: 100%;
 }
 
 header h1
 {
-    font-size: 75px;
+                   /* 40px    75px      */
+    font-size: clamp(2.5rem, 3.906vw, 5rem);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: -3%;
     text-wrap: nowrap;
 }
-
-header p { font-size: 24px; text-transform: uppercase; }
+                        
+header p 
+{ 
+                    /* 14.4px  24px  26px */
+    font-size: clamp(.9rem, 1.25vw, 1.625rem);
+    text-transform: uppercase; 
+}
 
 header #header-info
 {
@@ -93,7 +102,7 @@ header .titulo-e-redes
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2.083vw;
     width: 100%;
 }
 
@@ -102,12 +111,12 @@ header .titulo-e-redes
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 22px;
+    gap: clamp(11px, 1.146vw, 23px);
 }
 
 .titulo-e-redes .linhas hr
 {
-    height: 8px;
+    height: clamp(5px, 0.417vw, 9px);
     background-color: var(--cor-txt-main);
 }
 
@@ -123,18 +132,23 @@ header .titulo-e-redes
     align-items: center;
     justify-content: center;
     background-color: var(--cor-colorida);
-    width: 3.5rem;
-    height: 3.5rem;
-    box-shadow: 5px 5px var(--cor-txt-main);
+    width: clamp(2.5rem, 2.917vw, 3.7rem);
+    height: clamp(2.5rem, 2.917vw, 3.7rem);
+    box-shadow: clamp(3px, 0.26vw, 0.26vw) clamp(3px, 0.26vw, 0.26vw) var(--cor-txt-main);
     color: var(--cor-bg);
 }
 
 .titulo-e-redes .redes > a > i 
 {
-    font-size: 42px;
+    font-size: clamp(1.9rem, 2.188vw, 2.688rem);
+    /* font-size: 2.188vw; */
     color: #eaeaea;
 }
-.titulo-e-redes .redes > a .fa-youtube { font-size: 37px; }
+.titulo-e-redes .redes > a .fa-youtube 
+{ 
+    font-size: clamp(1.7rem, 1.927vw, 2.375rem); 
+    /* font-size: 1.927vw;  */
+}
 
 header #header-desc { font-weight: 500; }
 
@@ -144,22 +158,25 @@ nav
 {
     width: 100%;
     display: flex;
-    gap: 2.4rem;
-    margin: 1.5rem 0 .9rem 0;
+    gap: clamp(.7rem, 2vw, 2vw);
+    margin: clamp(.8rem, 1.25vw, 1.5rem) 0 clamp(.5rem, 0.75vw, .9rem) 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 nav > a
 {
     flex-grow: 1;
-    border: 2px solid var(--cor-txt-main);
-    box-shadow: 4px 4px var(--cor-txt-main);
-    padding: .6rem 0;
+    border: clamp(2px, 0.156vw, 0.156vw) solid var(--cor-txt-main);
+    box-shadow: clamp(3px, 0.208vw, 0.208vw) clamp(3px, 0.208vw, 0.208vw) var(--cor-txt-main);
+                        /* .6 */
+    padding: clamp(.4rem, 0.5vw, .7rem) 0;
     text-align: center;
 
     color: var(--cor-txt-main);
     font-weight: 500;
     text-transform: capitalize;
-    font-size: 25px;
+    font-size: clamp(1rem, 1.302vw, 1.688rem);
 }
 #pagina-atual
 { 
@@ -190,12 +207,14 @@ footer
     padding: 1.5rem 0;
 }
 
-footer .sessao-2
+footer .sessao-1, footer .sessao-2
 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
+
+footer .sessao-1 { align-items: flex-start;}
 
 footer p
 {
@@ -209,10 +228,106 @@ footer a
 }
 footer p, footer a
 {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 1.042vw, 1.042vw);
     font-weight: 400;
     text-transform: uppercase;
 }
 
 
+
+
+
+
 /* RESPONSIVIDADE */
+
+/* Desktops */
+/* Telas extra largas */
+@media (min-width: 1920px) {}
+
+/* Desktops */
+@media (max-width: 1919px) {}
+
+@media (max-width: 1366px) {}
+
+@media (max-width: 1280px) {}
+
+/* Tablets largos/laptops */
+@media (max-width: 1199px) {}
+
+/* tablets pequenos */
+@media (max-width: 991px) {}
+
+@media (max-width: 884px) 
+{ 
+    nav a { width: calc(50% - .7rem); }
+
+    footer 
+    { 
+        flex-direction: column; 
+        justify-content: center;
+        align-items: flex-end;
+        gap: .5rem;
+    }
+    footer .sessao-1 { align-items: flex-end; } 
+    footer p { text-align: right; }
+}
+
+/* Dispositivos menores */
+@media (max-width: 767px) 
+{
+    body { padding: 0 clamp(2.5rem, 2.5vw, 2.5vw); }
+
+    .btn-tema 
+    {
+        right: .9rem;
+        top: .5rem;
+    }
+    header { padding: 2.9rem 0 1.3rem 0; }
+    .titulo-e-redes .redes 
+    { 
+        flex-direction: column;
+        gap: .5rem; 
+    } 
+
+    header #header-info { margin-bottom: -1rem; }
+    header #header-desc 
+    { 
+        margin-top: -1.3rem;
+        width: 70%;
+        text-align: center;
+    }
+
+    footer { padding: 1rem 0; }
+}
+
+/* Mobile */
+@media (max-width: 480px) 
+{
+    body { padding: 0 clamp(1.5rem, 2.5vw, 2.5vw); }
+
+    .titulo-e-redes .linhas { display: none; }
+
+    header p { font-size: clamp(.8rem, 1.25vw, 1.625rem); }
+    header #header-desc { width: 60%; }
+    header h1 { font-size: clamp(2.4rem, 3.906vw, 5rem); }
+    nav > a { font-size: clamp(.9rem, 1.302vw, 1.688rem); }
+
+    footer p, footer a { font-size: clamp(0.75rem, 1.042vw, 1.042vw); }
+
+}
+
+
+
+
+/* Para quando o dispositivo estiver com a orientação de paisagem */
+@media all and (orientation: landscape) {  }
+
+/* Para quando o dispositivo estiver com a orientação de retrato */
+@media all and (orientation: portrait) {  }
+
+
+
+
+
+
+

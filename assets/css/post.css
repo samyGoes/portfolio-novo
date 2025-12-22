@@ -34,10 +34,11 @@ article #sessao-imgs
 }
 article #sessao-imgs figure
 {
-    height: 21rem;
+    height: clamp(13.75rem, 30.5vh, 30.5vh);
     width: 100%;
-    border: 2px solid var(--cor-txt-main);
-    box-shadow: 5px 5px var(--cor-txt-main);
+                /* 2px  3px */
+    border: clamp(2px, 0.156vw, 0.156vw) solid var(--cor-txt-main);
+    box-shadow: clamp(3px, 0.26vw, 0.26vw) clamp(3px, 0.26vw, 0.26vw) var(--cor-txt-main);
 }
 article #sessao-imgs figure img
 {
@@ -51,7 +52,7 @@ article #sessao-detalhes
     display: flex;
     flex-direction: column;
     width: 70%;
-    gap: 1rem;
+    gap: clamp(.7rem, 0.833vw, 0.833vw);
 }
 
 article #sessao-detalhes #sessao-detalhes-nav
@@ -62,12 +63,12 @@ article #sessao-detalhes #sessao-detalhes-nav
 #sessao-detalhes-nav #formas
 {
     display: flex;
-    gap: .6rem;
+    gap: clamp(0.4rem, .5vw, .5vw);
 }
 #sessao-detalhes-nav #formas .losango
 {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: clamp(0.938rem, 1.25vw, 1.25vw);
+    height: clamp(0.938rem, 1.25vw, 1.25vw);
     background-color: var(--cor-colorida);
     rotate: 45deg;
     transform-origin: bottom;
@@ -82,8 +83,8 @@ article #sessao-detalhes #sessao-detalhes-nav
 
 #sessao-detalhes-data 
 {
-    font-size: 18px;
-    font-weight: 400;
+                    /* 13px 18px 22px */
+    font-size: clamp(0.813rem, 0.938vw, 1.375rem) !important;
     color: var(--cor-txt-sec);
     text-transform: uppercase;
 }
@@ -93,16 +94,17 @@ article #sessao-detalhes h2, article #sessao-detalhes h3
     font-weight: 500;
     text-transform: uppercase;
 }
-article #sessao-detalhes h2 { font-size: 36px; font-weight: 500; }
-article #sessao-detalhes h3 { font-size: 24px; font-weight: 500; } 
-
-article #sessao-detalhes hr { border: 1px solid var(--cor-txt-main); }
+article #sessao-detalhes h2 { font-size: clamp(1.5rem, 1.875vw, 1.875vw); font-weight: 500; }
+article #sessao-detalhes h3 { font-size: clamp(1.2rem, 1.25vw, 1.25vw); font-weight: 500; } 
+                                  /* 2px */
+article #sessao-detalhes hr { border: 0.104vw solid var(--cor-txt-main); }
 
 #sessao-detalhes li, #sessao-detalhes p
 {
     letter-spacing: 2%;
-    line-height: 26px;
-    font-size: 20px;
+    line-height: clamp(1.2rem, 1.5vw, 1.5vw);
+                    /* 14px  20px   24px */
+    font-size: clamp(0.875rem, 1.042vw, 1.042vw);
     font-weight: 400;
 }
 
@@ -111,9 +113,8 @@ article #sessao-detalhes hr { border: 1px solid var(--cor-txt-main); }
 #sessao-detalhes-links { list-style: none; }
 #sessao-detalhes-links > li > a
 {
-    font-size: 18px;
     font-weight: 500;
-    line-height: 29px;
+    line-height: clamp(1.3rem, 1.7vw, 1.7vw);
     color: var(--cor-colorida);
     text-decoration: underline;
     text-transform: uppercase;
@@ -126,13 +127,13 @@ article #sessao-detalhes hr { border: 1px solid var(--cor-txt-main); }
 .quadrados
 {
     display: flex;
-    gap: .6rem;
+    gap: clamp(0.4rem, .5vw, .5vw);
     margin: .9rem 0;
 }
 .quadrado
 {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: clamp(0.938rem, 1.25vw, 1.25vw);
+    height: clamp(0.938rem, 1.25vw, 1.25vw);
     background-color: var(--cor-txt-main);
 }
 
@@ -141,3 +142,67 @@ article #sessao-detalhes hr { border: 1px solid var(--cor-txt-main); }
 
 /* REDEFININDO CONFIG FOOTER */
 footer { padding: 3.2rem 0 1.5rem 0; }
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+
+@media (min-aspect-ratio: 21/9) 
+{
+    article #sessao-imgs figure { height: 34.5vh; }
+}
+
+/* Large tablets/laptops */
+@media (max-width: 1199px) {}
+
+@media (max-width: 1000px)
+{
+    article
+    {
+        flex-direction: column;
+        gap: clamp(1.331rem, 2.167vw, 2.167vw);
+    }
+    article #sessao-imgs 
+    {
+        width: 100%;
+        flex-direction: row;
+    }
+    article #sessao-imgs figure { width: 50%; }
+    article #sessao-detalhes { width: 100%; }
+}
+
+/* Small tablets */
+@media (max-width: 991px) 
+{
+    article #sessao-imgs figure { height: 29.458vw; }
+}
+
+@media (max-width: 884px)
+{
+    article #sessao-imgs { gap: clamp(.7rem, 2vw, 2vw); }
+    #sessao-detalhes p { text-align: justify; }
+}
+
+/* Extra small devices */
+@media (max-width: 767px) {}
+
+/* Mobile */
+@media (max-width: 480px) 
+{
+    body { padding: 0 clamp(1.5rem, 2.5vw, 2.5vw); }
+
+    article #sessao-imgs { flex-direction: column; }
+    article #sessao-imgs figure { width: 100%; height: 63.458vw; }
+
+    #sessao-detalhes-data { font-size: clamp(0.7rem, 0.938vw, 1.375rem) !important; }
+    .quadrados { margin: 0; }
+}
+
+
+
+
+
+

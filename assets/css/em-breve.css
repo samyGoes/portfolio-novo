@@ -9,7 +9,8 @@ main
 
 main p
 {
-    font-size: 30px;
+                /* 30px */
+    font-size: clamp(1.3rem, 1.563vw, 1.9rem);
     font-weight: 400;
     color: var(--cor-txt-main);
 }
