@@ -13,8 +13,9 @@
 /* CORPO GERAL */ 
 body
 {
+    display: flex;
     min-height: 100vh;
-    padding: 5vw 10.833vw;
+    padding: 6vw 10.833vw;
 
     font-family: 'Roboto Condensed', sans-serif;
     color: var(--cor-txt-main);
@@ -25,6 +26,7 @@ main
 {  
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 #formas
@@ -55,7 +57,7 @@ main
     align-items: center;
     width: 100%;
     gap: 1.6rem;
-    margin: 1rem 0 3.5rem 0;
+    margin: 1rem 0 clamp(2rem, 2.917vw, 2.917vw) 0;
 }
 h1, h2, h3
 {
@@ -75,14 +77,36 @@ h3 { font-size: 20px; margin-bottom: .5rem; }
 
 /* academico.html */
 
-ul li, .p-com-data
+ul 
+{
+  list-style-type: disclosure-closed;
+  margin-left: .8rem;
+}
+
+
+.box-li
 {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+    margin-bottom: .5rem;
 }
-span { color: var(--cor-txt-sec); text-wrap: nowrap; }
-.btn-voltar.academico { margin-top: 8rem !important; }
+
+ul li 
+{
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.box-li-data
+{ 
+    color: var(--cor-txt-sec); 
+    text-wrap: nowrap !important; 
+    margin-bottom: 0 !important;
+}
+.btn-voltar.academico { margin-top: 6vh !important; }
+
 /* ----- */
 
 p, ol, ul, #link-icones { margin-bottom: clamp(1.5rem, 2.083vw, 2.083vw) }
@@ -121,4 +145,29 @@ ol { margin-left: 1.3rem; }
 { 
     transform: translate(4px, 4px); 
     box-shadow: none; 
+}
+
+
+
+
+/* RESPONSIVIDADE */
+/* Dispositivos menores */
+@media (max-width: 767px) 
+{
+    body { padding: 5vw clamp(2.5rem, 2.5vw, 2.5vw); }
+}
+
+/* Mobile */
+@media (max-width: 480px) 
+{
+    body { padding: 5vw clamp(1.5rem, 2.5vw, 2.5vw); }
+
+    .box-li { gap: 1rem; }
+    p, a, ol li, ul li { font-size: clamp(0.8rem, 1.042vw, 1.042vw); }
+}
+
+@media (max-width: 357px)
+{
+    body { padding: 6vw clamp(1.1rem, 2.5vw, 2.5vw); }
+    .titulo { gap: 1.2rem; }
 }
