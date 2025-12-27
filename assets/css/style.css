@@ -38,22 +38,22 @@ body
     border: clamp(2px, 0.156vw, 0.156vw) solid var(--cor-txt-main);
     box-shadow: clamp(3px, 0.208vw, 0.208vw) clamp(3px, 0.208vw, 0.208vw) var(--cor-txt-main);
         /* 3rem */
-    width: clamp(2.1rem, 2.5vw, 3.2rem);
-    height: clamp(2.1rem, 2.5vw, 3.2rem);
+    width: clamp(2.1rem, 2.5vw, 2.5vw);
+    height: clamp(2.1rem, 2.5vw, 2.5vw);
     cursor: pointer;
 }
 
 .btn-tema > i 
 {
             /* 35px */
-    font-size: clamp(1.3rem, 1.823vw, 2.2rem);
+    font-size: clamp(1.3rem, 1.823vw, 1.823vw);
     color: var(--cor-txt-main);
 }
 .btn-tema .fa-sun { display: none; }
 .btn-tema.dark
 {
-    box-shadow: 4px 4px var(--cor-txt-sec);
-    border: 2px solid var(--cor-txt-sec);
+    box-shadow: clamp(3px, 0.208vw, 0.208vw) clamp(3px, 0.208vw, 0.208vw) var(--cor-txt-sec);
+    border: clamp(2px, 0.156vw, 0.156vw) solid var(--cor-txt-sec);
 }
 .btn-tema .fa-solid.fa-sun { color: #bebebe; }
 #btn-tema-click 
@@ -76,8 +76,8 @@ header
 
 header h1
 {
-                   /* 40px    75px      */
-    font-size: clamp(2.5rem, 3.906vw, 5rem);
+                   /* 40px    75px  */
+    font-size: clamp(2.5rem, 3.906vw, 3.7vw);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: -3%;
@@ -86,8 +86,8 @@ header h1
                         
 header p 
 { 
-                    /* 14.4px  24px  26px */
-    font-size: clamp(.9rem, 1.25vw, 1.625rem);
+                    /* 14.4px  24px  */
+    font-size: clamp(.9rem, 1.25vw, 1.25vw);
     text-transform: uppercase; 
 }
 
@@ -132,21 +132,21 @@ header .titulo-e-redes
     align-items: center;
     justify-content: center;
     background-color: var(--cor-colorida);
-    width: clamp(2.5rem, 2.917vw, 3.7rem);
-    height: clamp(2.5rem, 2.917vw, 3.7rem);
+    width: clamp(2.5rem, 2.917vw, 2.917vw);
+    height: clamp(2.5rem, 2.917vw, 2.917vw);
     box-shadow: clamp(3px, 0.26vw, 0.26vw) clamp(3px, 0.26vw, 0.26vw) var(--cor-txt-main);
     color: var(--cor-bg);
 }
 
 .titulo-e-redes .redes > a > i 
 {
-    font-size: clamp(1.9rem, 2.188vw, 2.688rem);
+    font-size: clamp(1.9rem, 2.188vw, 2.188vw);
     /* font-size: 2.188vw; */
     color: #eaeaea;
 }
 .titulo-e-redes .redes > a .fa-youtube 
 { 
-    font-size: clamp(1.7rem, 1.927vw, 2.375rem); 
+    font-size: clamp(1.7rem, 1.927vw, 1.927vw); 
     /* font-size: 1.927vw;  */
 }
 
@@ -176,7 +176,7 @@ nav > a
     color: var(--cor-txt-main);
     font-weight: 500;
     text-transform: capitalize;
-    font-size: clamp(1rem, 1.302vw, 1.688rem);
+    font-size: clamp(1rem, 1.302vw, 1.302vw);
 }
 #pagina-atual
 { 
@@ -239,24 +239,13 @@ footer p, footer a
 
 
 /* RESPONSIVIDADE */
-
-/* Desktops */
 /* Telas extra largas */
-@media (min-width: 1920px) {}
-
-/* Desktops */
-@media (max-width: 1919px) {}
-
-@media (max-width: 1366px) {}
-
-@media (max-width: 1280px) {}
-
-/* Tablets largos/laptops */
-@media (max-width: 1199px) {}
+@media (min-aspect-ratio: 21/9) 
+{
+    header { padding: 2.5rem 0 1.5rem 0; }
+}
 
 /* tablets pequenos */
-@media (max-width: 991px) {}
-
 @media (max-width: 884px) 
 { 
     nav a { width: calc(50% - .7rem); }
@@ -277,12 +266,8 @@ footer p, footer a
 {
     body { padding: 0 clamp(2.5rem, 2.5vw, 2.5vw); }
 
-    .btn-tema 
-    {
-        right: .9rem;
-        top: .5rem;
-    }
-    header { padding: 2.9rem 0 1.3rem 0; }
+    .btn-tema { right: .9rem; top: .5rem; }
+    header { padding: 3rem 0 1.3rem 0; }
     .titulo-e-redes .redes 
     { 
         flex-direction: column;
@@ -305,6 +290,12 @@ footer p, footer a
 {
     body { padding: 0 clamp(1.5rem, 2.5vw, 2.5vw); }
 
+    .btn-tema 
+    {
+        width: clamp(2rem, 2.5vw, 3.2rem);
+        height: clamp(2rem, 2.5vw, 3.2rem);
+    }
+
     .titulo-e-redes .linhas { display: none; }
 
     header p { font-size: clamp(.8rem, 1.25vw, 1.625rem); }
@@ -313,17 +304,15 @@ footer p, footer a
     nav > a { font-size: clamp(.9rem, 1.302vw, 1.688rem); }
 
     footer p, footer a { font-size: clamp(0.75rem, 1.042vw, 1.042vw); }
-
 }
 
+@media (max-width: 357px)
+{
+    body { padding: 0 clamp(1.1rem, 2.5vw, 2.5vw); }
 
-
-
-/* Para quando o dispositivo estiver com a orientação de paisagem */
-@media all and (orientation: landscape) {  }
-
-/* Para quando o dispositivo estiver com a orientação de retrato */
-@media all and (orientation: portrait) {  }
+    header h1 { font-size: clamp(2.123rem, 3.906vw, 5rem); }
+    header p { font-size: clamp(.7rem, 1.25vw, 1.625rem); }
+}
 
 
 

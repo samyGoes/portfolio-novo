@@ -150,14 +150,13 @@ footer { padding: 3.2rem 0 1.5rem 0; }
 
 /* RESPONSIVIDADE */
 
+/* Telas extra largas */
 @media (min-aspect-ratio: 21/9) 
 {
-    article #sessao-imgs figure { height: 34.5vh; }
+    article #sessao-imgs figure { height: 39.5vh; }
 }
 
-/* Large tablets/laptops */
-@media (max-width: 1199px) {}
-
+/* tablets largos/laptops */
 @media (max-width: 1000px)
 {
     article
@@ -174,7 +173,7 @@ footer { padding: 3.2rem 0 1.5rem 0; }
     article #sessao-detalhes { width: 100%; }
 }
 
-/* Small tablets */
+/* Tabletes pequenos */
 @media (max-width: 991px) 
 {
     article #sessao-imgs figure { height: 29.458vw; }
@@ -186,7 +185,7 @@ footer { padding: 3.2rem 0 1.5rem 0; }
     #sessao-detalhes p { text-align: justify; }
 }
 
-/* Extra small devices */
+/* Dispositivos menores */
 @media (max-width: 767px) {}
 
 /* Mobile */
@@ -201,6 +200,10 @@ footer { padding: 3.2rem 0 1.5rem 0; }
     .quadrados { margin: 0; }
 }
 
+@media (max-width: 357px)
+{
+    body { padding: 0 clamp(1.1rem, 2.5vw, 2.5vw); }
+}
 
 
 
