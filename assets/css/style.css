@@ -37,7 +37,7 @@ body
     top: 1rem;
     border: clamp(2px, 0.156vw, 0.156vw) solid var(--cor-txt-main);
     box-shadow: clamp(3px, 0.208vw, 0.208vw) clamp(3px, 0.208vw, 0.208vw) var(--cor-txt-main);
-        /* 3rem */
+    background: none;
     width: clamp(2.1rem, 2.5vw, 2.5vw);
     height: clamp(2.1rem, 2.5vw, 2.5vw);
     cursor: pointer;
@@ -54,6 +54,7 @@ body
 {
     box-shadow: clamp(3px, 0.208vw, 0.208vw) clamp(3px, 0.208vw, 0.208vw) var(--cor-txt-sec);
     border: clamp(2px, 0.156vw, 0.156vw) solid var(--cor-txt-sec);
+    background: none;
 }
 .btn-tema .fa-solid.fa-sun { color: #bebebe; }
 #btn-tema-click 
@@ -131,7 +132,7 @@ header .titulo-e-redes
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor-colorida);
+    background-color: #752cf1;
     width: clamp(2.5rem, 2.917vw, 2.917vw);
     height: clamp(2.5rem, 2.917vw, 2.917vw);
     box-shadow: clamp(3px, 0.26vw, 0.26vw) clamp(3px, 0.26vw, 0.26vw) var(--cor-txt-main);

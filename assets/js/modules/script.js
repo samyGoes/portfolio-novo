@@ -108,12 +108,18 @@ function mudaTema()
         let tema = verificaTema();
         if(tema == "padrão")
         {
+            btn_tema.setAttribute('aria-label', 'Tema escuro ativado');
+            btn_tema.setAttribute('aria-pressed', 'true');
+
             localStorage.setItem("tema", "dark");
             styleTema("btn-tema dark", "none", "block", 2, true); 
         }
         // Setar tema padrão (claro)
         else 
         { 
+            btn_tema.setAttribute('aria-label', 'Ativar tema escuro');
+            btn_tema.setAttribute('aria-pressed', 'false');
+
             localStorage.setItem("tema", "padrão");    
             styleTema("btn-tema", "block", "none", 1, true);  
         }
@@ -176,13 +182,13 @@ function styleTema(btn_class, i_lua_d, i_sol_d, tema = 1, regra)
 
     const cores = 
     [
-        ['--cor-txt-main', '--cor-txt-sec', '--cor-bg'], // VARIÁVEIS CSS
-        ['#1f1f1f', '#575757', '#eaeaea'],        // TEMA PADRÃO/CLARO = 1
-        ['#bdbdbd', '#818181', '#1f1f1f']         // TEMA ESCURO = 2
+        ['--cor-txt-main', '--cor-txt-sec', '--cor-bg', '--cor-colorida'], // VARIÁVEIS CSS
+        ['#1f1f1f', '#575757', '#eaeaea', '#752cf1'],        // TEMA PADRÃO/CLARO = 1
+        ['#bdbdbd', '#8c8c8c', '#1f1f1f', '#9e66ff']         // TEMA ESCURO = 2
     ];
 
     // Alterando as cores das variáveis CSS dependendo do tema escolhido
-    for(let i = 0; i < cores.length; i++)
+    for(let i = 0; i < cores[0].length; i++)
     {
         document.documentElement.style.setProperty(cores[0][i], cores[tema][i]);
     }
