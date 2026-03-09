@@ -11,7 +11,13 @@ function idade()
     const txtIdade = document.querySelector("#idade");
     let dataAtual = new Date();
     let anoAtual = dataAtual.getFullYear();
-    let idade = anoAtual - 2003;
+    let mesAtual = dataAtual.getMonth() + 1;
+    let diaAtual = dataAtual.getDate();
+
+    let idade = Math.floor(anoAtual - 2003 - .3 + mesAtual / 10);
+    
+    if(diaAtual > 3) { diaAtual = 3; }
+    idade = Math.floor(idade - .3 + diaAtual / 10);
 
     txtIdade.innerHTML = idade;
 }
