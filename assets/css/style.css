@@ -192,7 +192,16 @@ nav > a
 
 
 /* CORPO PRINCIPAL */
-main { flex-grow: 1; background-color: var(--cor-colorida); }
+main { flex-grow: 1; }
+#main-tela-inicial 
+{
+    height: 44vh;
+    background-color: #fff;
+    background-image: url(../img/desenho.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 
 
 
@@ -244,6 +253,7 @@ footer p, footer a
 @media (min-aspect-ratio: 21/9) 
 {
     header { padding: 2.5rem 0 1.5rem 0; }
+    #main-tela-inicial { background-position: top 39% center; }
 }
 
 /* tablets pequenos */
