@@ -4,22 +4,38 @@ const btn_tema = document.querySelector(".btn-tema");
 
 
 /** 
- * @description Calcula minha idade atual e adiciona ao HTML.
+ * @description Calcula minha idade atual com timeStamp e adiciona ao HTML.
  */
 function idade()
 {
+    // USANDO TIMESTAMP
     const txtIdade = document.querySelector("#idade");
+    
+    let timeStampHoje = Math.floor(new Date().getTime()/1000.0);        // Segundos desde 1970 até hoje
+    const timeStampSamy = 1046703600;                                   // Segundos desde que nasci
+    let idade = Math.floor((timeStampHoje - timeStampSamy) / 31536000); // Subtrai os dois e dividi pelos segundos de um ano (365 dias)
+    
+    txtIdade.innerHTML = idade;
+
+    // #region COMENTADO PARA HOMENAGEAR MINHA GAMBIARRA ANTERIOR :D
+    /*
     let dataAtual = new Date();
     let anoAtual = dataAtual.getFullYear();
     let mesAtual = dataAtual.getMonth() + 1;
     let diaAtual = dataAtual.getDate();
-
+    
+    // Minha data de nascimento: 03/03/2003
     let idade = Math.floor(anoAtual - 2003 - .3 + mesAtual / 10);
+    // Exemplo:               2026  - 2003 - .3 +     1    / 10
+                                    23     - .3 +      0.1
+                                        22.7    +      0.1
+                                                22.8 (22 anos, faltam 2 meses pro aniversário)
     
     if(diaAtual > 3) { diaAtual = 3; }
     idade = Math.floor(idade - .3 + diaAtual / 10);
-
-    txtIdade.innerHTML = idade;
+    // Mesma lógica, faltam 3 dias pro aniversário
+    */
+    //#endregion
 }
 
 
